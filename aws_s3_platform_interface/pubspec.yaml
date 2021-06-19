@@ -1,7 +1,7 @@
 name: aws_s3_platform_interface
 description: A platform interface for call aws s3 services via AmazonS3Client.
 version: 0.0.1
-homepage:
+homepage: https://github.com/autthapol-k/aws-s3/tree/main/aws_s3_platform_interface
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
