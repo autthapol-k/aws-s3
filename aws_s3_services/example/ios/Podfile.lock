@@ -1,0 +1,33 @@
+PODS:
+  - aws_s3_services (0.0.1):
+    - AWSS3
+    - Flutter
+  - AWSCore (2.24.2)
+  - AWSS3 (2.24.2):
+    - AWSCore (= 2.24.2)
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - aws_s3_services (from `.symlinks/plugins/aws_s3_services/ios`)
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - AWSCore
+    - AWSS3
+
+EXTERNAL SOURCES:
+  aws_s3_services:
+    :path: ".symlinks/plugins/aws_s3_services/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  aws_s3_services: c25d5d36e9fbe977c5505278911e25b4dc40da16
+  AWSCore: 08a61ac2b1d98b2d43f59ee40c4bd68e58dfdea3
+  AWSS3: 1782d0db43a1219a118ea6263d4ea01f76f8cdf4
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1

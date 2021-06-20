@@ -1,6 +1,5 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'credentials.dart';
 import 'method_channel_aws_s3_platform.dart';
 
 abstract class AwsS3Platform extends PlatformInterface {
@@ -18,7 +17,8 @@ abstract class AwsS3Platform extends PlatformInterface {
   }
 
   Future<bool> putObject({
-    required Credentials credentials,
+    required Map<String, String> configs,
+    required Map<String, String> credentials,
     required String key,
     required String path,
   }) {
@@ -26,14 +26,16 @@ abstract class AwsS3Platform extends PlatformInterface {
   }
 
   Future<bool> deleteObject({
-    required Credentials credentials,
+    required Map<String, String> configs,
+    required Map<String, String> credentials,
     required String key,
   }) {
     throw UnimplementedError('deleteObject() has not been implemented.');
   }
 
   Future<bool> deleteObjects({
-    required Credentials credentials,
+    required Map<String, String> configs,
+    required Map<String, String> credentials,
     required String prefix,
   }) {
     throw UnimplementedError('deleteObjects() has not been implemented.');

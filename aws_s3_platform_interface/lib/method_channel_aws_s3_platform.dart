@@ -1,14 +1,14 @@
 import 'package:flutter/services.dart';
 
 import 'aws_s3_platform_interface.dart';
-import 'credentials.dart';
 
 class MethodChannelAwsS3 extends AwsS3Platform {
   final MethodChannel channel = MethodChannel('aws_s3');
 
   @override
   Future<bool> putObject({
-    required Credentials credentials,
+    required Map<String, String> configs,
+    required Map<String, String> credentials,
     required String key,
     required String path,
   }) async {
@@ -17,7 +17,8 @@ class MethodChannelAwsS3 extends AwsS3Platform {
 
   @override
   Future<bool> deleteObject({
-    required Credentials credentials,
+    required Map<String, String> configs,
+    required Map<String, String> credentials,
     required String key,
   }) async {
     return (await channel.invokeMethod<bool>('deleteObject'))!;
@@ -25,7 +26,8 @@ class MethodChannelAwsS3 extends AwsS3Platform {
 
   @override
   Future<bool> deleteObjects({
-    required Credentials credentials,
+    required Map<String, String> configs,
+    required Map<String, String> credentials,
     required String prefix,
   }) async {
     return (await channel.invokeMethod<bool>('deleteObjects'))!;
